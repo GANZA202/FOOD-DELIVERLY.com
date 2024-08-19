@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Login</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff18;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        body{
+            background-color: #333;
+        }
+        form{
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body style="background-image: url(background.jpg);">
+    <div class="container">
+        <h2>Payment Login</h2>
+        <form id="fast.html" onsubmit="return validateForm()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="bank">
+                <option value="">Select Bank/Card</option>
+                <option value="bank_of_kigali">Bank of Kigali</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="mastercard">Momo</option>
+                <option value="mastercard">Bitcoin</option>
+                <option value="mastercard">Paypal</option>
+            </select>
+            <input type="text" id="username" placeholder="Location" required>
+            <input type="number" id="paymentDetails" placeholder="Payment Details" required>
+            <select id="currency">
+                <option value="RWF">Rwandan Franc (RWF)</option>
+                <option value="USD">US Dollar ($)</option>
+                <option value="USD">pound ()</option>
+            </select><br><br>
+            <input type="checkbox">Verify your payment<br>
+           
+             <a href="fast.html"><button> PAY OUT</button></a>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript Functionality
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var bank = document.getElementById("bank").value;
+            var paymentDetails = document.getElementById("paymentDetails").value;
+            var currency = document.getElementById("currency").value;
+
+            if (username == "Prince" || password == "1234" || bank == "" || paymentDetails == "") {
+                alert("payment successful! Standard Delivery: Arrives within 30-45 minutes🙏😉.");
+                      // Redirect to another page after successful login
+            window.location.href = 'fast.html';
+                return false;
+            
+            }
+
+            // Additional validation logic can be added here
+
+            return true; // Form submission allowed
+        }
+        
+    </script>
+</body>
+</html>

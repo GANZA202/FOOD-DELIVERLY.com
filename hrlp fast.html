@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Delivery Help</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+            background-color: transparent;
+            color:black;
+            text-align: center;
+            padding: px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fast Food Delivery Help</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#how-to-order">How to Order</a></li>
+            <li><a href="#delivery-options">Delivery Options</a></li>
+            <li><a href="#payment">Payment</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="closebtn" onclick="closeNav()">Close &times;</button>
+        </div>
+        <a href="fast.html" class="active">HOME🏡</a><BR></BR>
+        <a href="payer.html">ABOUT🆎</a><br><br>
+        <a href="service.html">SERVICES🧾</a><br><br>
+        <a href="paymentoriginal.html">PAYMENT💳</a><br><br>
+        <a href="REGISTRATION FORM.HTML">SIGIN</a><br><br>
+        <a href="LOGIN FORM.html">LOGIN</a><br><br>
+        <a href="my information acc.html">ACCOUNT👤</a><br><br>
+    </div>
+
+    <div class="content">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+       
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search.....">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        
+    <main>
+        <section id="how-to-order">
+            <h2>How to Order</h2>
+            <p>To order food, follow these steps:</p>
+            <ol>
+                <li>Visit our website or mobile app.</li>
+                <li>Browse the menu and select the items you want.</li>
+                <li>Go to your cart and review your order.</li>
+                <li>Proceed to checkout and provide your delivery details.</li>
+                <li>Complete the payment process.</li>
+                <li>Wait for your delicious meal to be delivered!</li>
+            </ol>
+        </section>
+        <section id="delivery-options">
+            <h2>Delivery Options</h2>
+            <p>We offer the following delivery options:</p>
+            <ul>
+                <li>Standard Delivery: Arrives within 30-45 minutes.</li>
+                <li>Express Delivery: Arrives within 15-30 minutes (additional charges may apply).</li>
+                <li>Pickup: Order online and pick up your food from our nearest location.</li>
+            </ul>
+        </section>
+        <section id="payment">
+            <h2>Payment</h2>
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li>Credit Card</li>
+                <li>Debit Card</li>
+                <li>Online Wallets (e.g., PayPal, Google Pay)</li>
+                <li>Cash on Delivery (available for select areas)</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at <a href="mailto:info@example.com">infoprinceganza27@gmail.com</a> for further assistance.</p>
+    </footer>
+    <script>
+         
+        function openNav() {
+            document.getElementById("sidebar").style.left = "0";
+            document.getElementsByClassName("content")[0].style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.left = "-250px";
+            document.getElementsByClassName("content")[0].style.marginLeft = "0";
+        }
+
+        // Automatically close sidebar after 3 seconds
+        setTimeout(function() {
+            closeNav();
+        }, 3000);
+    
+    </script>
+</body>
+</html>

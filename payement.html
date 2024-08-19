@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fast food deliverly</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+        
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-x: scroll; /* Added to enable horizontal scrolling */
+            white-space: nowrap; /* Added to keep images in a single line */
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* initially hidden */
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            padding-top: 20px;
+            transition: left 0.3s ease;
+            z-index: 1;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        /* Content Styles */
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+            padding-left: 20px;
+        }
+
+        .openbtn {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .search-container {
+            display: inline-block;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .search-container input[type="text"] {
+            margin-left:420%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 200px;
+            margin-bottom:-3cm;
+        }
+
+        .search-container button {
+            margin-left:510%;
+           position: relative;
+            top: 0;
+            right: 0;
+            padding: 10px 15px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            margin-top:-4cm;
+        }
+
+        /* Image Styles */
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 200px; /* Adjust this value as needed */
+            margin-right: 20px;
+            margin-bottom: 20px;
+            vertical-align: top;
+            padding: 25px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-container button {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+
+        }
+        
+        label {
+            font-weight: bold;
+        }
+     button{
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-left: 300px;
+            margin-left: -10px;
+            
+     }
+     p {
+            text-align: center;
+        }
+            input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+    }
+     input[type="text"],
+    nput[type="email"],
+        input[type="password"] {
+       
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: 1500px;
+    }
+    h2{
+        text-align: center;
+        }
+
+    header{
+        font-weight: 200;
+            font-size: xx-large;
+            text-align: center;
+    }
+form{
+    max-width: 400px;
+            margin: 0 auto;
+            background-color: whitesmoke;
+            padding: 200px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin-top: 150px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.397); /* Transparent background */
+            margin-top: -100px;
+            
+}
+</style>
+</head>
+<body>
+    
+    </div>
+    <form action="4444" method="POST" onsubmit="return validateForm()">
+        <u><b> <header> PAYEMENT METHOD</header></b><BR><BR></u>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+
+        <label for="PAY OUT">PAY OUT METHOD:</label><br>
+        <input type="text" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <div class="form-group">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Verify your pay out</label><br><br><br>
+        </div>
+    
+       
+        <a href="44444"><button style="text-align: center;">PAY OUT NOW</button></a>
+
+    </form>
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.left = "0";
+            document.getElementsByClassName("content")[0].style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.left = "-250px";
+            document.getElementsByClassName("content")[0].style.marginLeft = "0";
+        }
+
+        // Automatically close sidebar after 3 seconds
+        setTimeout(function() {
+            closeNav();
+        }, 3000);
+    </script>
+    </body>
+</html>

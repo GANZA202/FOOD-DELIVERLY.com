@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right,rgb(193, 204, 193),rgb(117, 121, 117));
+        }
+
+        form {
+            background-image: url('cool.png');
+            max-width: 400px;
+            margin: 150px auto 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 50px;
+            
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-image: url('user-icon.png'); /* Assuming you have an icon for user */
+            background-repeat: no-repeat;
+            background-position: 5px center;
+            padding-left: 40px;
+        }
+
+        input[type="password"] {
+            background-image: url('password-icon.png'); /* Assuming you have an icon for password */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 60%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        p a {
+            color: blue;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<form action="fast.html" method="POST" onsubmit="login(); return false;">
+    <h1 style="color: #07ff13;">LOGIN FORM</h1>
+    <label for="username" style="color: #07ff13;">Username:</label><br>
+    <input type="text" id="username" placeholder="Enter your username" required><br>
+
+    <label for="password" style="color: #07ff13;">Password:</label><br>
+    <input type="password" id="password" placeholder="Enter your password" required><br><br>
+
+  <a href="fast.html"><input type="submit" value="LOGIN"></a>
+
+    <p>Don't have an account? <a href="REGISTRATION FORM.HTML" style="text-decoration: none; color: #07ff13; font-size: 17px;">Create one here</a>.</p>
+</form>
+
+<script>
+  
+alert(' welcome to fast food derivery')
+function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Dummy validation, replace with actual validation
+    if (username === 'prince' && password === '1234') {
+        alert('Login successful! 😉😉 ');
+        alert('welcome to fast food delivery! 😉😉 ');
+        window.location.href = 'fast.html'; // Redirect to another page after successful login
+    } else {
+        alert('Incorrect username or password! try again');
+    }
+}
+
+</script>
+
+</body>
+</html>

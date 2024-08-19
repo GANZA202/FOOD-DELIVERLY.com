@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Delivery Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #delivery-options {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .delivery-option {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .delivery-option h3 {
+            margin-top: 0;
+        }
+
+        .select-option-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .select-option-btn:hover {
+            background-color: #555;
+        }
+
+        #delivery-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fast Food Delivery Help</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#how-to-order">How to Order</a></li>
+            <li><a href="#delivery-options">Delivery Options</a></li>
+            <li><a href="#payment">Payment</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="how-to-order">
+            <h2>How to Order</h2>
+            <p>To order food, follow these steps:</p>
+            <ol>
+                <li>Visit our website or mobile app.</li>
+                <li>Browse the menu and select the items you want.</li>
+                <li>Go to your cart and review your order.</li>
+                <li>Proceed to checkout and provide your delivery details.</li>
+                <li>Complete the payment process.</li>
+                <li>Wait for your delicious meal to be delivered!</li>
+            </ol>
+        </section>
+        <section id="delivery-options">
+            <h2>Delivery Options</h2>
+            <div class="delivery-option">
+                <h3>Standard Delivery</h3>
+                <p>Arrives within 30-45 minutes. Free for orders over $20.</p>
+                <button class="select-option-btn" data-option="Standard">Select</button>
+            </div>
+            <div class="delivery-option">
+                <h3>Express Delivery</h3>
+                <p>Arrives within 15-30 minutes (additional charges may apply).</p>
+                <button class="select-option-btn" data-option="Express">Select</button>
+            </div>
+            <div class="delivery-option">
+                <h3>Pickup</h3>
+                <p>Order online and pick up your food from our nearest location.</p>
+                <button class="select-option-btn" data-option="Pickup">Select</button>
+            </div>
+            <div id="delivery-message"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at <a href="mailto:info@example.com">info@example.com</a> for further assistance.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.select-option-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const option = this.getAttribute('data-option');
+                const message = document.getElementById('delivery-message');
+                if (option === 'Standard') {
+                    message.textContent = 'You have selected Standard Delivery. Your order will arrive within 30-45 minutes.';
+                } else if (option === 'Express') {
+                    message.textContent = 'You have selected Express Delivery. Your order will arrive within 15-30 minutes. Additional charges may apply.';
+                } else if (option === 'Pickup') {
+                    message.textContent = 'You have selected Pickup. Please visit our nearest location to pick up your order.';
+                }
+                message.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

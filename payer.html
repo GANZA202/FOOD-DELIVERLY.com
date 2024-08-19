@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Delivery Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        section ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 20px;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+        }
+
+        section h3 {
+            color: #666;
+            margin-top: 20px;
+        }
+
+        #loginForm {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #loginForm label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #loginForm input[type="text"],
+        #loginForm input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        #loginForm button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #loginForm button:hover {
+            background-color: #555;
+        }
+
+        #loginMessage {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ff0000;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fast Food Delivery Help</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#how-to-order">How to Order</a></li>
+            <li><a href="#delivery-options">Delivery Options</a></li>
+            <li><a href="#payment">Payment</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="how-to-order">
+            <h2>How to Order</h2>
+            <p>To order food, follow these steps:</p>
+            <ol>
+                <li>Visit our website or mobile app.</li>
+                <li>Browse the menu and select the items you want.</li>
+                <li>Go to your cart and review your order.</li>
+                <li>Proceed to checkout and provide your delivery details.</li>
+                <li>Complete the payment process.</li>
+                <li>Wait for your delicious meal to be delivered!</li>
+            </ol>
+        </section>
+        <section id="delivery-options">
+            <h2>Delivery Options</h2>
+            <p>We offer the following delivery options:</p>
+            <ul>
+                <li>Standard Delivery: Arrives within 30-45 minutes.</li>
+                <li>Express Delivery: Arrives within 15-30 minutes (additional charges may apply).</li>
+                <li>Pickup: Order online and pick up your food from our nearest location.</li>
+            </ul>
+        </section>
+        <section id="payment">
+            <h2>Payment</h2>
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li>Credit Card</li>
+                <li>Momo</li>
+                <li>Online Wallets (e.g., PayPal, Google Pay)</li>
+                <li>Cash on Delivery (available for select areas)</li>
+            </ul>
+            <h3>Secure Payment</h3>
+            <p>Rest assured that your payment information is safe with us. We use industry-standard encryption to protect your personal and financial data.</p>
+            <h3>Login</h3>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="loginMessage"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at <a href="mailto:info@example.com">info@princengendo.com</a> for further assistance.</p>
+    </footer>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            // Perform authentication (this is just a placeholder, replace it with your actual authentication logic)
+            if (username === "prince" && password === "1234") {
+                document.getElementById("loginMessage").textContent = "Login successful!";
+                // Redirect user to payment page or perform further actions
+            } else {
+                document.getElementById("loginMessage").textContent = "Invalid username or password. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>
